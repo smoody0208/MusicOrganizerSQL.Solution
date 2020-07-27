@@ -6,14 +6,10 @@ namespace MusicOrganizer.Models
   {
     public string Name { get; set; }
     public int Id { get; }
-    private static List<Record> _instances = new List<Record> {};
-
 
     public Record(string name)
     {
       Name = name;
-      _instances.Add(this);
-      Id = _instances.Count;
     }
 
     public static List<Record> GetAll()
@@ -27,7 +23,8 @@ namespace MusicOrganizer.Models
     }
     public static Record Find(int searchId)
     {
-      return _instances[searchId -1];
+       Item placeholderRecord = new Record("placeholder record");
+       return placeholder;
     }
   }
 }

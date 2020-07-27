@@ -16,6 +16,11 @@ namespace MusicOrganizer
       Configuration = builder.Build();
     }
 
+    public static class DBConfiguration
+  {
+    public static string ConnectionString = "server=localhost;user id=root;password=epicodus;port=3306;database=music_organizer;";
+  }
+
     public IConfigurationRoot Configuration { get; }
 
     public void ConfigureServices(IServiceCollection services)
